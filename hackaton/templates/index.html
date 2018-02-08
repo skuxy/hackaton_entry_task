@@ -24,7 +24,7 @@
 
     <h1>Registration</h1>
 
-     <form>
+     <form action="{% url 'register' %}" method="post">
          <div class="input-container">
              <label for="Teamname">Teamname</label>
              <input type="text" id="Teamname" required="required"/>
