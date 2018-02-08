@@ -5,8 +5,8 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 import json
 
-BASE_LOGIN_URL = "http://52.233.158.172/change/api/hr/account/"
-BASE_INFO_URL = "http://52.233.158.172/change/api/hr/team/details/"
+BASE_LOGIN_URL = "http://52.233.158.172/change/api/en/account/"
+BASE_INFO_URL = "http://52.233.158.172/change/api/en/team/details/"
 
 
 def index(request):
