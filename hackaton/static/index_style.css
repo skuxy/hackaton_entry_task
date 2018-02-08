@@ -1,0 +1,13 @@
+body {
+    background:url("background.jpg");
+}
+
+h1 {
+    font-family: "Arial Black";
+    text-align: center;
+    padding: 4px;
+}
+
+form {
+    font-family: Arial;
+}
