@@ -107,7 +107,8 @@ def login(request):
 
     if response.status_code == 200:
         print('go to show details')
-        requests.post(
+
+        requests.get(
             BASE_CONFIRM_URL,
             headers={'X-Authorization': str(auth_token)},
             params={
@@ -115,6 +116,7 @@ def login(request):
                 "repository": GITHUB_REPO_URL
             }
         )
+
         return show_details(request, team_id=team_id, team_name=team_name, auth_token=auth_token)
     else:
         print('show details didnt happen')
