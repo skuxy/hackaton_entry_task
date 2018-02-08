@@ -71,10 +71,11 @@ def register(request):
 
         response = requests.post(
             BASE_LOGIN_URL + "register",
-            json.loads(json.dumps(post_data))
+            json.dumps(post_data),
+            headers={
+                'Content-Type': 'application/json'
+            }
         )
-
-        print(response.json())
 
     return HttpResponse(response.json, content_type='application/json')
 
