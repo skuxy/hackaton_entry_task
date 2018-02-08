@@ -89,15 +89,20 @@ def login(request):
     }
 
     response = requests.post("http://52.233.158.172/change/api/hr/account/login",json.loads(json.dumps(post_data)))
-    print(teamname)
-    print(password)
-    print(response.json())
 
-    
+    team_id = response.json()["Result"][1:-1].strip().split(',')[0].strip().split(':')[-1]
+    team_name = response.json()["Result"][1:-1].strip().split(',')[1].strip().split(':')[-1][1:-1]
+    auth_token = response.json()["Result"][1:-1].strip().split(',')[3].strip().split(':')[-1][1:-1]
 
     # {
     #     'Result':'{"TeamId":20,"TeamName":"localhot","Password":null,"AuthorizationToken":"bG9jYWxob3Q6Og==","NextApi":"http://52.233.158.172/change/documents/localhot/2137634ChangeCode_korak_3.pdf","Errors":[]}',
     #     'Errors':[]
     #     }
 
-    return HttpResponse(response.json, content_type='application/json')
+
+    return show_details(request, team_id=team_id, team_name=team_name, auth_token=auth_token)
+
+def show_details(request, team_id, team_name, auth_token):
+    response = requests.get("http://52.233.158.172/change/api/hr/team/details/"+str(team_id), headers={'X-Authorization': str(auth_token)})
+    print(response.json())
+    return HttpResponse()
