@@ -99,7 +99,6 @@ def login(request):
         json.loads(json.dumps(post_data))
     )
 
-    import pdb; pdb.set_trace()  # XXX BREAKPOINT
     response_json = json.loads(response.json()["Result"])
     team_id = response_json["TeamId"]
     team_name = response_json["TeamName"]
