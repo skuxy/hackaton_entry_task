@@ -17,10 +17,51 @@
 
    <!-- Loads the path to your static files -->
     {% load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'index_style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'show_details_style.css' %}" />
 
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>localhot</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>ID:</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col">
+            <h2>Members:</h2>
+        </div>
+
+        <div class="col-lg-5 col-sm-10 dd d1">
+            <img src="br1.png" class="pic">
+
+            <p>Ime</p>
+            <p>Prezime</p>
+            <p>Email</p>
+
+        </div>
+
+        <div class="col-lg-5 col-sm-10 dd d2">
+            <img src="br2.png" class="pic">
+        </div>
+
+        <div class="col-lg-5 col-sm-10 dd d3">
+            <img src="br3.png" class="pic">
+        </div>
+
+        <div class="col-lg-5 col-sm-10 dd d4">
+            <img src="br4.png" class="pic">
+        </div>
+
+    </div>
 
 </body>
 </html>
