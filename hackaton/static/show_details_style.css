@@ -8,20 +8,22 @@ body {
 
 h1 {
   font-family: "Arial Black";
-  font-size: 12em;
+  font-size: 10em;
   text-align: center;
-    color: #3762bc;
+    color: #4c71bc;
 
 }
 
 h2 {
   font-family: Arial;
   font-weight:bold;
+  text-align: center;
 }
 
 p {
   font-family: Arial;
   font-weight:bold;
+  font-size: 15px;
 }
 
 .dd {
@@ -31,9 +33,17 @@ p {
   margin:20px;
 }
 
+.center {
+    margin: auto;
+    width: 50%;
+  background-color: #670d10;
+  padding: 10px;
+}
+
 .pic {
   align: left;
   height:200px;
   width:200px;
   margin:auto;
 }
+
