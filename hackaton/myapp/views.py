@@ -92,7 +92,10 @@ def login(request):
 
     response = requests.post(
         BASE_LOGIN_URL + "login",
-        json.loads(json.dumps(post_data))
+        json.dumps(post_data),
+            headers={
+                'Content-Type': 'application/json'
+            }
     )
 
     response_json = json.loads(response.json()["Result"])
@@ -100,7 +103,7 @@ def login(request):
     team_name = response_json["TeamName"]
     auth_token = response_json["AuthorizationToken"]
 
-    if response.status_code == '200':
+    if response.status_code == 200:
         print('go to show details')
         return show_details(request, team_id=team_id, team_name=team_name, auth_token=auth_token)
     else:
