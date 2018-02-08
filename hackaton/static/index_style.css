@@ -1,46 +1,26 @@
-body {
-    background:url("background.jpg");
+body{
+    background: url('background.jpg') no-repeat fixed center;
+    -webkit-background-size: cover;
+    color: black;
 }
 
-h1 {
-    font-family: "Arial Black";
-    text-align: center;
-    padding: 4px;
+#columnWithBorder{
+    border-right: thin inset rgba(154, 154, 154, 0.57);
 }
 
-form {
-    font-family: Arial;
-    position: absolute;
-    text-align: center;
-}
-
-.vl {
-    border-left: 3px solid slategray;
-    height: 500px;
-}
-
-label{
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
-    margin:4px;
-}
-input {
-  float: left;
-}
-
-button {
-    background: none;
-    width:100px;
-    position:relative;
-    height: 200%;
-}
-
-div {
-    position:relative;
-    height:100%;
+#logo-image{
+    display: block;
+    max-width: 500px;
     width: 100%;
-    padding:12px;
-    margin:10px;
+    align: middle;
+    margin: 2px auto 150px auto;
+}
+
+
+input {
+    margin:5px 5px 5px 5px;
+}
+
+.container{
+    position: relative;
 }
