@@ -7,6 +7,8 @@ import json
 
 BASE_LOGIN_URL = "http://52.233.158.172/change/api/en/account/"
 BASE_INFO_URL = "http://52.233.158.172/change/api/en/team/details/"
+BASE_CONFIRM_URL = "http://52.233.158.172/change/api/en/team/confirm"
+GITHUB_REPO_URL = "https://github.com/skuxy/hackaton_entry_task"
 
 
 def index(request):
@@ -105,6 +107,14 @@ def login(request):
 
     if response.status_code == 200:
         print('go to show details')
+        # requests.post(
+        #     BASE_CONFIRM_URL,
+        #     headers={'X-Authorization': str(auth_token)},
+        #     params={
+        #         "id": team_id,
+        #         "repository": GITHUB_REPO_URL
+        #     }
+        # )
         return show_details(request, team_id=team_id, team_name=team_name, auth_token=auth_token)
     else:
         print('show details didnt happen')
