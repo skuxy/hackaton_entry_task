@@ -1,0 +1,40 @@
+body {
+  background: url(prazno.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Arial Black";
+  font-size: 12em;
+  text-align: center;
+    color: #3762bc;
+
+}
+
+h2 {
+  font-family: Arial;
+  font-weight:bold;
+}
+
+p {
+  font-family: Arial;
+  font-weight:bold;
+}
+
+.dd {
+  position: relative;
+  height:200px;
+  width:500px;
+  margin:20px;
+  background:yellow;
+}
+
+.pic {
+  align: left;
+  height:200px;
+  width:200px;
+  margin:auto;
+}

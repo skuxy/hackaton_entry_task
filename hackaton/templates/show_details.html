@@ -21,44 +21,72 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>localhot</h1>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col">
-                <h3>ID:</h3>
-            </div>
-        </div>
-    </div>
+    <h1>{{ teamname }}</h1>
+    <h2>ID:</h2>
+
 
     <div class="container">
         <div class="col">
             <h2>Members:</h2>
         </div>
 
-        <div class="col-lg-5 col-sm-10 dd d1">
-            <img src="br1.png" class="pic">
+        <div class="col-lg-6 col-sm-10 dd d1">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static "br1.png" %}" class="pic">
+                </div>
 
-            <p>Ime</p>
-            <p>Prezime</p>
-            <p>Email</p>
-
+                <div class="col-md-6">
+                    <p>Name:</p>
+                    <p>Surname:</p>
+                    <p>Email:</p>
+                </div>
+            </div>
         </div>
 
-        <div class="col-lg-5 col-sm-10 dd d2">
-            <img src="br2.png" class="pic">
+        <div class="col-lg-6 col-sm-10 dd d1">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static "br2.png" %}" class="pic">
+                </div>
+
+                <div class="col-md-6">
+                    <p>Name</p>
+                    <p>Surname</p>
+                    <p>Email</p>
+                </div>
+            </div>
         </div>
 
-        <div class="col-lg-5 col-sm-10 dd d3">
-            <img src="br3.png" class="pic">
+        <div class="col-lg-6 col-sm-10 dd d1">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static "br3.png" %}" class="pic">
+                </div>
+
+                <div class="col-md-6">
+                    <p>Name</p>
+                    <p>Surname</p>
+                    <p>Email</p>
+                </div>
+            </div>
         </div>
 
-        <div class="col-lg-5 col-sm-10 dd d4">
-            <img src="br4.png" class="pic">
+        <div class="col-lg-6 col-sm-10 dd d1">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static "br4.png" %}" class="pic">
+                </div>
+
+                <div class="col-md-6">
+                    <p>Name</p>
+                    <p>Surname</p>
+                    <p>Email</p>
+                </div>
+            </div>
+        </div>
+
         </div>
 
     </div>
