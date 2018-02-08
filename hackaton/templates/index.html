@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title></title>
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Optional JavaScript -->
 
-     <!-- Loads the path to your static files -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   <!-- Loads the path to your static files -->
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'index_style.css' %}" />
 
@@ -16,13 +24,81 @@
 
     <h1>Registration</h1>
 
-    <form>
-        Teamname:
-        <input type="text" name="firstname" id="inputFirstName" class="form-control" placeholder="Teamname">
-        Password:
-
-    </form>
-
+     <form>
+         <div class="input-container">
+             <label for="Teamname">Teamname</label>
+             <input type="text" id="Teamname" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="Password">Password</label>
+             <input type="password" id="Password" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="Name1">Name</label>
+             <input type="password" id="Name1" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="Surname1">Surname</label>
+             <input type="text" id="Surname1" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="email1">e-mail</label>
+             <input type="email" id="email1" required="required"/>
+             <div class="bar"></div>
+         </div>
+           <div class="input-container">
+             <label for="Name2">Name</label>
+             <input type="password" id="Name2" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="Surname2">Surname</label>
+             <input type="text" id="Surname2" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="email2">e-mail</label>
+             <input type="email" id="email2" required="required"/>
+             <div class="bar"></div>
+         </div>
+           <div class="input-container">
+             <label for="Name3">Name</label>
+             <input type="password" id="Name3" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="Surname3">Surname</label>
+             <input type="text" id="Surname3" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="email3">e-mail</label>
+             <input type="email" id="email3" required="required"/>
+             <div class="bar"></div>
+         </div>
+           <div class="input-container">
+             <label for="Name4">Name</label>
+             <input type="password" id="Name4" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="Surname4">Surname</label>
+             <input type="text" id="Surname4" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="input-container">
+             <label for="email4">e-mail</label>
+             <input type="email" id="email4" required="required"/>
+             <div class="bar"></div>
+         </div>
+         <div class="button-container">
+             <button><span>Submit</span></button>
+         </div>
+     </form>
 
 </body>
 </html>
