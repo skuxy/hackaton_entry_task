@@ -24,9 +24,9 @@
 <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-          <div class="col-md-6" id="columnWithBorder">
-            <h2>Please sign in</h2>
-              <form class="form-signin" action="" method="post">
+            <div class="col-md-6" id="columnWithBorder">
+                <h2>Please sign in</h2>
+                <form class="form-signin" action="" method="post">
                   {% csrf_token %}
                 <input type="username" name="Teamname" id="Teamname" class="form-control" placeholder="Username" required autofocus>
                 <input type="password" name="Password" id="Password" class="form-control" placeholder="Password" required>
@@ -45,27 +45,44 @@
 
                 <input type="password" name="Password" id="inputLastName" class="form-control" placeholder="Password" required>
 
-                  <h3>Team member 1</h3>
-                <input type="text" name="name1" id="inputName1" class="form-control" placeholder="Name" required>
-                <input type="text" name="surname1" id="inputSurname1" class="form-control" placeholder="Surname" required autofocus>
-                <input type="email" name="emil1" id="email1" class="form-control" placeholder="email" required autofocus>
+                  <div class="row">
+                      <div class="col-md-6">
+                      <h3>Team member 1</h3>
+                    <input type="text" name="name1" id="inputName1" class="form-control" placeholder="Name" required>
+                    <input type="text" name="surname1" id="inputSurname1" class="form-control" placeholder="Surname" required autofocus>
+                    <input type="email" name="emil1" id="email1" class="form-control" placeholder="email" required autofocus>
+                        </div>
 
-                  <h3>Team member 2</h3>
-                <input type="text" name="name2" id="inputName2" class="form-control" placeholder="Name" required>
-                <input type="text" name="surname1" id="inputSurname2" class="form-control" placeholder="Surname" required autofocus>
-                <input type="email" name="emil1" id="email2" class="form-control" placeholder="email" required autofocus>
+                                            <div class="col-md-6">
+
+                      <h3>Team member 2</h3>
+                    <input type="text" name="name2" id="inputName2" class="form-control" placeholder="Name" required>
+                    <input type="text" name="surname1" id="inputSurname2" class="form-control" placeholder="Surname" required autofocus>
+                    <input type="email" name="emil1" id="email2" class="form-control" placeholder="email" required autofocus>
+                      </div>
+                  </div>
+
+                  <div class="row">
+
+                                                                  <div class="col-md-6">
 
                   <h3>Team member 3</h3>
                 <input type="text" name="name3" id="inputName3" class="form-control" placeholder="Name" required>
                 <input type="text" name="surname3" id="inputSurname3" class="form-control" placeholder="Surname" required autofocus>
                 <input type="email" name="emil3" id="email3" class="form-control" placeholder="email" required autofocus>
+                                                                      </div>
+
+                 <div class="col-md-6">
 
                   <h3>Team member 4</h3>
                 <input type="text" name="name3" id="inputName4" class="form-control" placeholder="Name" required>
                 <input type="text" name="surname3" id="inputSurname4" class="form-control" placeholder="Surname" required autofocus>
                 <input type="email" name="emil3" id="email4" class="form-control" placeholder="email" required autofocus>
+</div>
+                </div>
 
                   <p><button class="btn btn-secondary" role="button" type="submit">Register</button></p>
+
 
                 </form>
 

@@ -1,19 +1,10 @@
 body{
-    background: url('background.jpg') no-repeat fixed center;
-    -webkit-background-size: cover;
+    background: url('pozadina.jpg') no-repeat fixed center;
     color: black;
 }
 
 #columnWithBorder{
     border-right: thin inset rgba(154, 154, 154, 0.57);
-}
-
-#logo-image{
-    display: block;
-    max-width: 500px;
-    width: 100%;
-    align: middle;
-    margin: 2px auto 150px auto;
 }
 
 
