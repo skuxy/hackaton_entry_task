@@ -43,6 +43,12 @@
                   {% csrf_token %}
                 <input type="text" name="Teamname" id="inputFirstName" class="form-control" placeholder="Teamname" required>
 
+            <div class="col-md-6">
+                <h2>Not registered?</h2>
+                <form class="form-register" action="{% url 'register' %}" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="teamname" id="inputFirstName" class="form-control" placeholder="Teamname" required>
+
                 <input type="password" name="Password" id="inputLastName" class="form-control" placeholder="Password" required>
 
                   <div class="row">
