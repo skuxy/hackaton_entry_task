@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 
 import requests
+import json
 
 # Create your views here.
 
@@ -65,7 +66,7 @@ def register(request):
         post_data = {
             "Teamname" : "localhot",
             "Password" : "strong password",
-            "Team": [
+            "Members": [
                 {
                     "name": "Zeljka",
                     "surname" : "Galovac",
@@ -89,7 +90,7 @@ def register(request):
             ]
         }
 
-
-    return HttpResponse(request, 'index.html')
+    return HttpResponse(json.dumps(post_data), content_type='application/json')
+    #return HttpResponse(request, 'index.html')
     # return JsonResponse(post_data)
-    # return render(request, 'index.html')
+    return render(request, 'index.html')
