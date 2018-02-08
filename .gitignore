@@ -1,3 +1,6 @@
+
+hackaton/*/__pycache__/*
+
 ### Django ###
 *.log
 *.pot
