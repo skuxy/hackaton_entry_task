@@ -3,6 +3,7 @@ import requests
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.http import JsonResponse
+import json
 
 
 def index(request):
@@ -71,8 +72,32 @@ def register(request):
         print()
         print(post_data)
 
-        response = requests.post("http://52.233.158.172/change/api/en/account/register", post_data)
+        response = requests.post("http://52.233.158.172/change/api/en/account/register", json.loads(json.dumps(post_data)))
 
         print(response.json())
+
+    return HttpResponse(response.json, content_type='application/json')
+
+
+def login(request):
+    teamname = request.POST.get('teamname')
+    password = request.POST.get('password')
+
+    post_data = {
+        "Teamname":teamname,
+        "Password":password,
+    }
+
+    response = requests.post("http://52.233.158.172/change/api/hr/account/login",json.loads(json.dumps(post_data)))
+    print(teamname)
+    print(password)
+    print(response.json())
+
+    
+
+    # {
+    #     'Result':'{"TeamId":20,"TeamName":"localhot","Password":null,"AuthorizationToken":"bG9jYWxob3Q6Og==","NextApi":"http://52.233.158.172/change/documents/localhot/2137634ChangeCode_korak_3.pdf","Errors":[]}',
+    #     'Errors':[]
+    #     }
 
     return HttpResponse(response.json, content_type='application/json')
