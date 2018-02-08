@@ -99,11 +99,14 @@ def login(request):
         json.loads(json.dumps(post_data))
     )
 
-    import pdb; pdb.set_trace()  # XXX BREAKPOINT
     response_json = json.loads(response.json()["Result"])
     team_id = response_json["TeamId"]
     team_name = response_json["TeamName"]
     auth_token = response_json["AuthorizationToken"]
+
+    print(team_id)
+    print(team_name)
+    print(auth_token)
 
     # {
     #     'Result':'{"TeamId":20,"TeamName":"localhot","Password":null,"AuthorizationToken":"bG9jYWxob3Q6Og==","NextApi":"http://52.233.158.172/change/documents/localhot/2137634ChangeCode_korak_3.pdf","Errors":[]}',
@@ -114,6 +117,23 @@ def login(request):
     return show_details(request, team_id=team_id, team_name=team_name, auth_token=auth_token)
 
 def show_details(request, team_id, team_name, auth_token):
-    response = requests.get("http://52.233.158.172/change/api/hr/team/details/"+str(team_id), header={})
-    print(response.json())
-    return HttpResponse()
+    response = requests.get("http://52.233.158.172/change/api/hr/team/details/"+str(team_id), headers={'X-Authorization': str(auth_token)})
+    response_json = response.json()
+    json_result = json.loads(response_json['Result'])
+    team_name = json_result['TeamName']
+    members = json_result['Members']
+    team_id = json_result['Id']
+
+    member1 = { 'name': members[0]['Name'], 'mail': members[0]['Mail'], 'surname': members[0]['Surname'] }
+    member2 = {'name': members[1]['Name'], 'mail': members[1]['Mail'], 'surname': members[1]['Surname']}
+    member3 = {'name': members[2]['Name'], 'mail': members[2]['Mail'], 'surname': members[2]['Surname']}
+    member4 = {'name': members[3]['Name'], 'mail': members[3]['Mail'], 'surname': members[3]['Surname']}
+
+    return render(request, 'show_details.html', context={
+        'teamname': team_name,
+        'team_id': team_id,
+        'member1': member1,
+        'member2': member2,
+        'member3': member3,
+        'member4': member4,
+    })
