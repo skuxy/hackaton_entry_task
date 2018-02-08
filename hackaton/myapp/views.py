@@ -1,4 +1,5 @@
 import json
+import requests
 
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -64,4 +65,6 @@ def register(request):
             ],
         }
 
-    return HttpResponse(json.dumps(post_data), content_type='application/json')
+        response = requests.post("http://52.233.158.172/change/api/en/account/register", post_data)
+
+    return HttpResponse(response, content_type='application/json')
