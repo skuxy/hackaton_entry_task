@@ -2,6 +2,7 @@ import requests
 
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.shortcuts import redirect
 import json
 
 BASE_LOGIN_URL = "http://52.233.158.172/change/api/hr/account/"
@@ -99,7 +100,12 @@ def login(request):
     team_name = response_json["TeamName"]
     auth_token = response_json["AuthorizationToken"]
 
-    return show_details(request, team_id=team_id, team_name=team_name, auth_token=auth_token)
+    if response.status_code == '200':
+        print('go to show details')
+        return show_details(request, team_id=team_id, team_name=team_name, auth_token=auth_token)
+    else:
+        print('show details didnt happen')
+        return redirect('/')
 
 def show_details(request, team_id, team_name, auth_token):
     response = requests.get("http://52.233.158.172/change/api/hr/team/details/"+str(team_id), headers={'X-Authorization': str(auth_token)})
