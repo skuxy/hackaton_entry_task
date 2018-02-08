@@ -1,4 +1,3 @@
-import json
 import requests
 
 from django.http import HttpResponse
@@ -67,4 +66,4 @@ def register(request):
 
         response = requests.post("http://52.233.158.172/change/api/en/account/register", post_data)
 
-    return HttpResponse(response, content_type='application/json')
+    return HttpResponse(response.json, content_type='application/json')
