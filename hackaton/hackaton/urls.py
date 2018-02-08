@@ -20,5 +20,5 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('register/', views.register, name='register'),
+    path('52.233.158.172/change/api/en/account/register', views.register, name='register'),
 ]
