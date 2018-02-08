@@ -93,9 +93,9 @@ def login(request):
     response = requests.post(
         BASE_LOGIN_URL + "login",
         json.dumps(post_data),
-            headers={
+        headers={
                 'Content-Type': 'application/json'
-            }
+        }
     )
 
     response_json = json.loads(response.json()["Result"])
@@ -110,15 +110,21 @@ def login(request):
         print('show details didnt happen')
         return redirect('/')
 
+
 def show_details(request, team_id, team_name, auth_token):
-    response = requests.get("http://52.233.158.172/change/api/hr/team/details/"+str(team_id), headers={'X-Authorization': str(auth_token)})
+    response = requests.get(
+        BASE_INFO_URL + str(team_id),
+        headers={'X-Authorization': str(auth_token)}
+    )
+
     response_json = response.json()
     json_result = json.loads(response_json['Result'])
+
     team_name = json_result['TeamName']
     members = json_result['Members']
     team_id = json_result['Id']
 
-    member1 = { 'name': members[0]['Name'], 'mail': members[0]['Mail'], 'surname': members[0]['Surname'] }
+    member1 = {'name': members[0]['Name'], 'mail': members[0]['Mail'], 'surname': members[0]['Surname']}
     member2 = {'name': members[1]['Name'], 'mail': members[1]['Mail'], 'surname': members[1]['Surname']}
     member3 = {'name': members[2]['Name'], 'mail': members[2]['Mail'], 'surname': members[2]['Surname']}
     member4 = {'name': members[3]['Name'], 'mail': members[3]['Mail'], 'surname': members[3]['Surname']}
