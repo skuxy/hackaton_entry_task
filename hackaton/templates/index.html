@@ -26,14 +26,12 @@
         <div class="row">
           <div class="col-md-6" id="columnWithBorder">
             <h2>Please sign in</h2>
-              <form class="form-signin" action="{% url 'register' %}" method="post">
+              <form class="form-signin" action="" method="post">
                   {% csrf_token %}
-                <label for="username" class="sr-only">Email address</label>
-                <input type="username" name="username" id="username" class="form-control" placeholder="Username" required autofocus>
-                <label for="password" class="sr-only">Password</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+                <input type="username" name="Teamname" id="username" class="form-control" placeholder="Username" required autofocus>
+                <input type="password" name="Password" id="password" class="form-control" placeholder="Password" required>
 
-                     <p><button class="btn btn-secondary" role="button" type="submit">Go</button></p>
+                  <p><button class="btn btn-secondary" role="button" type="submit">Go</button></p>
 
               </form>
 
@@ -43,27 +41,29 @@
             <h2>Not registered?</h2>
               <form class="form-register" action="{% url 'register' %}" method="post">
                   {% csrf_token %}
-                <label for="inputFirstName"  class="sr-only">First Name</label>
-                <input type="text" name="firstname" id="inputFirstName" class="form-control" placeholder="First Name" required>
+                <input type="text" name="Teamname" id="inputFirstName" class="form-control" placeholder="Teamname" required>
 
-                <label for="inputLastName" class="sr-only">Last Name</label>
-                <input type="text" name="lastname" id="inputLastName" class="form-control" placeholder="Last Name" required>
+                <input type="password" name="Password" id="inputLastName" class="form-control" placeholder="Password" required>
 
-                  <label for="inputEmail" class="sr-only">E-mail</label>
-                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="E-mail" required>
+                  <h3>Team member 1</h3>
+                <input type="text" name="name1" id="inputName1" class="form-control" placeholder="Name" required>
+                <input type="text" name="surname1" id="inputSurname1" class="form-control" placeholder="Surname" required autofocus>
+                <input type="email" name="emil1" id="email1" class="form-control" placeholder="email" required autofocus>
 
-                <label for="inputUsername" class="sr-only">Username</label>
-                <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" minlength="5" required autofocus>
+                  <h3>Team member 2</h3>
+                <input type="text" name="name2" id="inputName2" class="form-control" placeholder="Name" required>
+                <input type="text" name="surname1" id="inputSurname2" class="form-control" placeholder="Surname" required autofocus>
+                <input type="email" name="emil1" id="email2" class="form-control" placeholder="email" required autofocus>
 
-                  <label for="oib" class="sr-only">Username</label>
-                <input type="text" name="oib" id="oib" class="form-control" placeholder="Oib" required autofocus maxlength="11" min="11">
+                  <h3>Team member 3</h3>
+                <input type="text" name="name3" id="inputName3" class="form-control" placeholder="Name" required>
+                <input type="text" name="surname3" id="inputSurname3" class="form-control" placeholder="Surname" required autofocus>
+                <input type="email" name="emil3" id="email3" class="form-control" placeholder="email" required autofocus>
 
-                <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required minlength="8">
-
-                <label for="inputConfirmPassword" class="sr-only">Confirm Password</label>
-                <input type="password" name="pass_confirm" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" required minlength="8">
-                  <p><button class="btn btn-secondary" type="submit" role="button">Get started</button></p>
+                  <h3>Team member 4</h3>
+                <input type="text" name="name3" id="inputName4" class="form-control" placeholder="Name" required>
+                <input type="text" name="surname3" id="inputSurname4" class="form-control" placeholder="Surname" required autofocus>
+                <input type="email" name="emil3" id="email4" class="form-control" placeholder="email" required autofocus>
 
                 </form>
 
