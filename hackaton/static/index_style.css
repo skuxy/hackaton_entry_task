@@ -10,4 +10,37 @@ h1 {
 
 form {
     font-family: Arial;
+    position: absolute;
+    text-align: center;
+}
+
+.vl {
+    border-left: 3px solid slategray;
+    height: 500px;
+}
+
+label{
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    margin:4px;
+}
+input {
+  float: left;
+}
+
+button {
+    background: none;
+    width:100px;
+    position:relative;
+    height: 200%;
+}
+
+div {
+    position:relative;
+    height:100%;
+    width: 100%;
+    padding:12px;
+    margin:10px;
 }
