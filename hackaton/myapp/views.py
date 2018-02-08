@@ -4,7 +4,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import json
 
-BASE_URL = "http://52.233.158.172/change/api/hr/account/"
+BASE_LOGIN_URL = "http://52.233.158.172/change/api/hr/account/"
+BASE_INFO_URL = "http://52.233.158.172/change/api/hr/team/details/"
 
 
 def index(request):
@@ -68,19 +69,13 @@ def register(request):
             ],
         }
 
-        print(teamname)
-        print(password)
-        print()
-        print(team_member)
-        print()
-        print(post_data)
-
         response = requests.post(
-            BASE_URL + "register",
-            json.loads(json.dumps(post_data))
+            BASE_LOGIN_URL + "register",
+            json.dumps(post_data),
+            headers={
+                'Content-Type': 'application/json'
+            }
         )
-
-        print(response.json())
 
     return HttpResponse(response.json, content_type='application/json')
 
@@ -95,7 +90,7 @@ def login(request):
     }
 
     response = requests.post(
-        BASE_URL + "login",
+        BASE_LOGIN_URL + "login",
         json.loads(json.dumps(post_data))
     )
 
@@ -103,16 +98,6 @@ def login(request):
     team_id = response_json["TeamId"]
     team_name = response_json["TeamName"]
     auth_token = response_json["AuthorizationToken"]
-
-    print(team_id)
-    print(team_name)
-    print(auth_token)
-
-    # {
-    #     'Result':'{"TeamId":20,"TeamName":"localhot","Password":null,"AuthorizationToken":"bG9jYWxob3Q6Og==","NextApi":"http://52.233.158.172/change/documents/localhot/2137634ChangeCode_korak_3.pdf","Errors":[]}',
-    #     'Errors':[]
-    #     }
-
 
     return show_details(request, team_id=team_id, team_name=team_name, auth_token=auth_token)
 
