@@ -1,10 +1,44 @@
 body{
-    background: url('pozadina.jpg') no-repeat fixed center;
-    color: black;
+    background: url(proba.svg) no-repeat fixed center;
+    -webkit-background-size: cover;    color: black;
+    margin: 40px;
+    margin-top:70px;
 }
 
+h2 {
+    font-family: "Arial Black";
+    margin-bottom:20px;
+    color: oldlace;
+    text-shadow: 2px 1px gray;
+}
+
+#stroke {
+    color: #3762bc;
+    text-shadow: none;
+
+}
+
+h3 {
+    font-family: Georgia;
+    margin-bottom:20px;
+    color: #3762bc;
+}
+
+
 #columnWithBorder{
-    border-right: thin inset rgba(154, 154, 154, 0.57);
+    border-right: thin inset rgba(154, 154, 154, 0);
+    margin-left: 20px;
+    background: rgba(0,0,200,0.2);
+    padding-bottom:50px;
+    border-radius: 5px;
+    padding-right: 20px;
+}
+
+#lefti {
+    margin-left:120px;
+    padding-right:5px;
+
+
 }
 
 
@@ -14,4 +48,36 @@ input {
 
 .container{
     position: relative;
+}
+
+input {
+	width: 100%;
+	margin-bottom: 10px;
+	background: none;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #gray;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+}
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+
+button {
+    height:40px;
+    width:100px;
+    transition: 0.2s linear;
+    background: #4a77d4; !important;
+    border:none;
+    opacity: 1;
+    color: white;
+    margin-top:20px;
+}
+
+button:hover {
+    color: blue; !important;
+    font-weight: bold;
 }

@@ -24,7 +24,7 @@
 <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-            <div class="col-md-6" id="columnWithBorder">
+            <div class="col-md-4" id="columnWithBorder">
                 <h2>Please sign in</h2>
                 <form class="form-signin" action="" method="post">
                   {% csrf_token %}
@@ -37,8 +37,8 @@
 
           </div>
 
-          <div class="col-md-6">
-            <h2>Not registered?</h2>
+          <div class="col-md-6" id="lefti">
+            <h2 id="stroke">Not registered?</h2>
               <form class="form-register" action="{% url 'register' %}" method="post">
                   {% csrf_token %}
                 <input type="text" name="Teamname" id="inputFirstName" class="form-control" placeholder="Teamname" required>
