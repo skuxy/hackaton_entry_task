@@ -103,6 +103,6 @@ def login(request):
     return show_details(request, team_id=team_id, team_name=team_name, auth_token=auth_token)
 
 def show_details(request, team_id, team_name, auth_token):
-    response = requests.get("http://52.233.158.172/change/api/hr/team/details/"+str(team_id), headers={'X-Authorization': str(auth_token)})
+    response = requests.get("http://52.233.158.172/change/api/hr/team/details/"+str(team_id), header={})
     print(response.json())
     return HttpResponse()
