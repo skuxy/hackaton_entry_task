@@ -25,6 +25,7 @@
     <h1>Registration</h1>
 
      <form action="{% url 'register' %}" method="post">
+         {% csrf_token %}
          <div class="input-container">
              <label for="Teamname">Teamname</label>
              <input type="text" id="Teamname" required="required"/>
@@ -37,7 +38,7 @@
          </div>
          <div class="input-container">
              <label for="Name1">Name</label>
-             <input type="password" id="Name1" required="required"/>
+             <input type="text" id="Name1" required="required"/>
              <div class="bar"></div>
          </div>
          <div class="input-container">
@@ -52,7 +53,7 @@
          </div>
            <div class="input-container">
              <label for="Name2">Name</label>
-             <input type="password" id="Name2" required="required"/>
+             <input type="text" id="Name2" required="required"/>
              <div class="bar"></div>
          </div>
          <div class="input-container">
@@ -67,7 +68,7 @@
          </div>
            <div class="input-container">
              <label for="Name3">Name</label>
-             <input type="password" id="Name3" required="required"/>
+             <input type="text" id="Name3" required="required"/>
              <div class="bar"></div>
          </div>
          <div class="input-container">
@@ -82,7 +83,7 @@
          </div>
            <div class="input-container">
              <label for="Name4">Name</label>
-             <input type="password" id="Name4" required="required"/>
+             <input type="text" id="Name4" required="required"/>
              <div class="bar"></div>
          </div>
          <div class="input-container">

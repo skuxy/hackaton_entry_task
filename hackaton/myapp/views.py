@@ -10,12 +10,27 @@ def index(request):
 
 
 def register(request):
-    teamname = request.POST.get('teamname')
-    password = request.POST.get('password')
-    team_member = list()
-    for i in range(4):
-        team_member[i] = [request.POST.get('name'),request.POST.get('surname'),request.POST.get('mail')]
+    if request.method == 'POST':
+        teamname = request.POST.get('Teamname')
+        password = request.POST.get('Password')
 
-    # response = JsonResponse({'teamname':teamname,'password':password})
+        team_member = {}
+        team_member[0] = {
+            'name':request.POST.get('Name1'),'surname':request.POST.get('Surname1'),'':request.POST.get('email1')
+            }
+        team_member[0] = {
+            'name':request.POST.get('Name2'),'surname':request.POST.get('Surname2'),'':request.POST.get('email2')
+            }
+        team_member[0] = {
+            'name':request.POST.get('Name3'),'surname':request.POST.get('Surname3'),'':request.POST.get('email3')
+            }
+
+        team_member[0] = {
+            'name':request.POST.get('Name4'),'surname':request.POST.get('Surname4'),'':request.POST.get('email4')
+        }
+
+        print(teamname)
+        print(password)
+        print(team_member)
 
     return render(request, 'index.html')
