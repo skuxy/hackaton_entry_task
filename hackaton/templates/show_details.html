@@ -23,7 +23,7 @@
 <body>
 
     <h1>{{ teamname }}</h1>
-    <h2>ID:</h2>
+    <h2>ID: {{ team_id }}</h2>
 
 
     <div class="container">
@@ -38,9 +38,9 @@
                 </div>
 
                 <div class="col-md-6">
-                    <p>Name:</p>
-                    <p>Surname:</p>
-                    <p>Email:</p>
+                    <p>Name: {{ member1.name }}</p>
+                    <p>Surname: {{ member1.surname }}</p>
+                    <p>Email: {{ member1.mail }}</p>
                 </div>
             </div>
         </div>
@@ -52,9 +52,9 @@
                 </div>
 
                 <div class="col-md-6">
-                    <p>Name</p>
-                    <p>Surname</p>
-                    <p>Email</p>
+                    <p>Name: {{ member2.name }}</p>
+                    <p>Surname: {{ member2.surname }}</p>
+                    <p>Email: {{ member2.mail }}</p>
                 </div>
             </div>
         </div>
@@ -66,9 +66,9 @@
                 </div>
 
                 <div class="col-md-6">
-                    <p>Name</p>
-                    <p>Surname</p>
-                    <p>Email</p>
+                    <p>Name: {{ member3.name }}</p>
+                    <p>Surname: {{ member3.surname }}</p>
+                    <p>Email: {{ member3.mail }}</p>
                 </div>
             </div>
         </div>
@@ -80,9 +80,9 @@
                 </div>
 
                 <div class="col-md-6">
-                    <p>Name</p>
-                    <p>Surname</p>
-                    <p>Email</p>
+                    <p>Name: {{ member4.name }}</p>
+                    <p>Surname: {{ member4.surname }}</p>
+                    <p>Email: {{ member4.mail }}</p>
                 </div>
             </div>
         </div>
